@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+ <h1 class="title">Lista użytkowników:</h1>
+    <table style="border-collapse: collapse; width: 100%;">
+        <tr>
+            <th style = 'text-align: left; padding: 8px; border-bottom: 1px solid #ddd; background-color: #d083dc;'>Nazwa</th>
+            <th style = 'text-align: left; padding: 8px; border-bottom: 1px solid #ddd; background-color: #d083dc;'>E-mail</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td style = 'text-align: left; padding: 8px; border-bottom: 1px solid #ddd; width: 60%;'>{{ user.name }}</td>
+            <td style = 'text-align: left; padding: 8px; border-bottom: 1px solid #ddd; width: 40%;'>{{ user.email }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
